@@ -2,18 +2,18 @@ const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 
 const flowPrincipal = addKeyword(EVENTS.WELCOME)
   .addAnswer(
-    "Bivenido a *Móvil Tech*",
-    "Reparacion de celulares iPhone y otras marcas"
+    "Bivenido a *Car Outlet*",
+    "Compra tu Auto Seminuevo desde la comodidad de tu casa"
   )
   .addAnswer(
     [
-        "¿Como podemos ayudarte?",
+        "¿Como puedo ayudarte?",
         "",
-        "*1* Ver estatus de reparacion",
-        "*2* Deparamento ventas",
-        "*3* Administracion",
+        "*1* Consultar sobre un vehículo",
+        "*2* Información sobre el financiamiento",
+        "*3* Agendar visita presencial",
     ]
   )  
-  .addAnswer('Responda con el numero de la opcion!')
+  .addAnswer('Responda con el numero de la opcion.')
 
 module.exports = flowPrincipal;

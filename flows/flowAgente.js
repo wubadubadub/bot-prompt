@@ -1,11 +1,11 @@
 const { addKeyword } = require("@bot-whatsapp/bot");
 
 /**
- * Esto se ejeuta cunado la persona escruibe "AGENTE"
+ * Esto se ejecuta cuando la persona escribe "AGENTE"
  */
 const flowAgente = addKeyword("AGENTE", { sensitive: true })
   .addAnswer(
-   "Estamos desviando tu conversacion a nuestro agente"
+   "Estamos desviando tu conversación a nuestro agente"
   )
   .addAction(async (ctx, {provider}) => {
     const nanoid = await import('nanoid')
@@ -15,6 +15,6 @@ const flowAgente = addKeyword("AGENTE", { sensitive: true })
         `${ctx.from}@s.whatsapp.net`
     ])
   })
-  .addAnswer('Te hemos agregado a un grupo con un asesor! Gracias')
+  .addAnswer('Creé un grupo y te agregué junto con un vendedor! Gracias')
 
 module.exports = flowAgente;
